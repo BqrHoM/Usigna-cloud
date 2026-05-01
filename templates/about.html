@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+
+{% block title %}
+about 🛈
+{% endblock %}
+
+
+
+{% block body %}
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<div class="container">
+  <h1 class="section-title big-text"  >What is Usigna </h1>
+
+  <div class="content-section">
+    <div class="text-block" style ="width : 90%;">
+      <h1 style ="font-size : 4vw; margin : 5%;">
+        Usigna is a free access tool which could facilitate your life by giving you the place to host
+        your personal cloud service, and even more to manage all of your cloud services from one page.
+      </h1>
+    </div>
+
+
+
+    <div class="image-block">
+      <img src= "{{ url_for ('static' , filename ='young men on a cloud.png')}}" alt="Dashboard illustration" data-aos="fade-up" data-aos-duration="1000">
+    </div>
+    <h1 class="section-title big-text" > This Mohamed Ibrahim Hammami CS50 Final Project   </h1>
+    <h1 class="section-title big-text" style ="margin-bottom : 15vw" > Who knows ? couldn't that be more than just a project ?   </h1>
+
+  </div>
+</div>
+
+{% endblock %}

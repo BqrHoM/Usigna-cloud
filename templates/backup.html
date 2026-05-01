@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Backup !
+{% endblock %}
+
+
+
+
+{% block body  %}
+<h1 class="section-title big-text" style =" text-align : center; padding-top : 13vw; margin-top : 7%; ; margin : 1%;"  >Back up your drive ! </h1>
+<form class=" box container mt-7 content-section p-4 rounded shadow " method = "post" action ="/backup">
+    <ul style ="list-style : none;" >
+        <li >
+            <h1 class ="text-center mb-4" style ="color : #7a2623;" >
+                Backup !
+
+            </h1>
+        </li>
+
+
+    <button class ="btn btn-danger w-100" type ="submit" style ="background-color : #8f2d29 ;"> Backup </button>
+
+
+
+    </ul>
+</form>
+
+{% endblock %}
+
+
+

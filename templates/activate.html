@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Add a service !
+{% endblock %}
+
+
+
+
+{% block body  %}
+<h1 class="section-title big-text" style =" text-align : center; padding-top : 13vw; margin-top : 7%; ; margin : 1%;"  >Add your drive service ! </h1>
+<form class=" box container mt-7 content-section p-4 rounded shadow " method = "post" action ="/activate">
+    <ul style ="list-style : none;" >
+        <li >
+            <h1 class ="text-center mb-4" style ="color : #7a2623;" >
+                {% if test %}
+                You have already a Premium access !
+                {% else %} Activate Your account !
+                {% endif %}
+
+            </h1>
+        </li>
+        {% if test == False %}
+
+            <li class ="form-floating mb-3" style="position: relative;">
+
+            <input  class ="form-control " style = "background-color : #d1534e;  "  type ="text" name ="code" placeholder ="Enter Your Activation Code !"  autocomplete ="off" >
+            <button class="add_button" type ="submit"   >
+                Submit
+            </button>
+            <label  style ="opacity : 1 ; font-weight : bold; color :#7a2623 ; font-size :100%; " for="code">Activation Code !</label>
+
+        </li>
+        {% endif %}
+
+    </ul>
+</form>
+
+{% endblock %}
+

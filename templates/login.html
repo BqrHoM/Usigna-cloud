@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Login
+{% endblock %}
+
+
+
+
+{% block body  %}
+<form class=" box container mt-7 content-section p-4 rounded shadow " method = "post" action ="/login">
+    <ul style ="list-style : none;" >
+        <li >
+            <h1 class ="text-center mb-4" style ="color : #7a2623;" > Log in to your account</h1>
+        </li>
+
+        <li class ="form-floating mb-3">
+            <input class ="form-control " style = "background-color : #d1534e;"  type="email" name ="email" placeholder ="name@example.com"  autocomplete ="off" >
+            <label style ="color :#7a2623 ;" for="email">name@example.com</label>
+        </li>
+        <li class ="form-floating mb-3">
+            <input class ="form-control" style = "background-color : #d1534e;" type ="password" placeholder ="Password" name ="password" autocomplete ="off">
+            <label for="password" style ="color :#7a2623 ;" > Password </label>
+        </li>
+    </ul>
+    <button class ="btn btn-danger w-100" type ="submit" style ="background-color : #8f2d29 ;"> Login </button>
+</form>
+{% endblock %}
+

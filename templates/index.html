@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Usigna
+{% endblock %}
+
+
+
+{% block body %}
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<div class="container">
+  <h1 class="section-title big-text"  >Find your best private cloud service in Usigna જ⁀➴</h1>
+
+  <div class="content-section">
+    <div class="text-block" style ="width : 90%;">
+      <h1 style ="font-size : 4vw; margin : 5%;">
+        With Usigna keep all of your data on your private storage systeme and access it remotely !
+      </h1>
+    </div>
+
+
+
+    <div class="image-block">
+      <img src= "{{ url_for ('static' , filename ='Interacting with the Digital Dashboard.png')}}" alt="Dashboard illustration" data-aos="fade-up" data-aos-duration="1000">
+    </div>
+    <h1 class="section-title big-text" style ="margin-bottom : 15vw"  > MAKE HAPPEND YOUR OWN PRIVACY STANDARDS  </h1>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+

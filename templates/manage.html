@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Login
+{% endblock %}
+
+
+
+
+{% block body  %}
+<form class=" box container mt-7 content-section p-4 rounded shadow " method = "post" action ="/manage" enctype="multipart/form-data">
+    <ul style ="list-style : none;" >
+        <li >
+            <h1 class ="text-center mb-4" style ="color : #7a2623;" > Upload Your Images To Your Drive ! </h1>
+        </li>
+
+
+    <li class="mb-3 text-center">
+    <label for="image" class="btn btn-danger" style ="font-size = 5vw;">
+        📷 Upload Images !
+    </label>
+    <input id ="image" type="file" name="image" style="display: none;" onchange="this.form.submit()">
+    </li>
+
+        </ul>
+    </form>
+
+<form class=" box container mt-7 content-section p-4 rounded shadow " method = "post" action ="/manage" enctype = "multipart/form-data">
+    <ul style ="list-style : none;" >
+            <li >
+                <h1 class ="text-center mb-4" style ="color : #7a2623;" > Your Images ! </h1>
+            </li>
+
+            {% for file in files%}
+                <img src="{{file}}" style = "margin : 1%  ;width : 20%; height : auto;" alt="file">
+
+            {% endfor %}
+
+    </ul>
+</form>
+{% endblock %}

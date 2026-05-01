@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Add a service !
+{% endblock %}
+
+
+
+
+{% block body  %}
+<h1 class="section-title big-text" style =" text-align : center; padding-top : 13vw; margin-top : 7%; ; margin : 1%;"  >Add your drive service ! </h1>
+<form class=" box container mt-7 content-section p-4 rounded shadow " method = "post" action ="/addservice">
+    <ul style ="list-style : none;" >
+        <li >
+            <h1 class ="text-center mb-4" style ="color : #7a2623;" > Services avaible on your plan !</h1>
+        </li>
+        {% if premium_check == True %}
+
+            <li class ="form-floating mb-3" style="position: relative;">
+
+            <input disabled class ="form-control " style = "background-color : #d1534e;  "   placeholder =""  autocomplete ="off" >
+            <button class="add_button" type ="submit"  name = "drive" value = "premium" {% if ps %} disabled style = "cursor :default;" {% endif %}  >
+                {% if ps %} Already Taken
+                {% else %} Add
+                {% endif %}
+            </button>
+            <label style ="opacity : 1 ; font-weight : bold; color :#7a2623 ; font-size :100%; " for="free_drive"> Drive+ (100 MB)</label>
+
+        </li>
+        {% endif %}
+        <li class ="form-floating mb-3" style="position: relative;">
+
+            <input disabled class ="form-control " style = "background-color : #d1534e;  "   placeholder =""  autocomplete ="off" >
+            <button class="add_button" type ="submit" name = "drive" {% if fs %} disabled style = "cursor :default;" {% endif %} value = "free"  >
+                {% if fs %} Already Taken
+                {% else %} Add
+                {% endif %}
+            </button>
+            <label style ="opacity : 1 ; font-weight : bold; color :#7a2623 ; font-size :100%; " for="free_drive">Free Drive (50 MB)</label>
+
+        </li>
+
+            <li class ="form-floating mb-3" style="position: relative;">
+
+            <input disabled class ="form-control " style = "background-color : #d1534e;  "  placeholder =""  autocomplete ="off" >
+            <button class ="add_button" disabled name = "number" style=" cursor:default !important ;"  >{{size}}</button>
+            <label style ="opacity : 1 ; font-weight : bold; color :#7a2623 ; font-size :100%; " for="number">Number of KB in use :</label>
+
+        </li>
+            <li class ="form-floating mb-3" style="position: relative;">
+
+            <input disabled class ="form-control " style = "background-color : #d1534e;  "  placeholder =""  autocomplete ="off" >
+            <button class ="add_button" disabled name = "number1" style=" cursor:default !important ;"  > {{avaible}} </button>
+            <label style ="opacity : 1 ; font-weight : bold; color :#7a2623 ; font-size :100%; " for="number1">Number of KB available :</label>
+
+        </li>
+    <button type ="button" onclick="window.location.href='/manage'" class ="btn btn-danger w-100" style ="background-color : #8f2d29 ;" >Manage Your Drive ! </button>
+
+    </ul>
+</form>
+
+{% endblock %}
+
